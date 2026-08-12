@@ -1,0 +1,267 @@
+/* ============================================================
+   INGEURBE DESIGN SYSTEM — Foundations
+   Manual de Marca Corporativa Interno 2026
+   "Inspiración que construye"
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  /* ----------------------------------------------------------
+     PRIMARY PALETTE — Color protagonista
+     Verde Ingeurbe domina toda comunicación.
+     Gris corporativo es soporte estructural.
+     ---------------------------------------------------------- */
+  --ing-verde:            #a2c617;  /* Pantone 376 C — protagonista */
+  --ing-gris:             #55525a;  /* Pantone 425 C — soporte */
+
+  /* ----------------------------------------------------------
+     SECONDARY PALETTE — Máx 20% del área visual
+     ---------------------------------------------------------- */
+  --ing-verde-claro:      #dde387;  /* Pantone 587 C */
+  --ing-verde-medio:      #758b29;  /* Pantone 7491 C */
+  --ing-verde-oscuro:     #4a5720;  /* Pantone 574 C */
+  --ing-turquesa:         #6aa0ac;  /* Pantone 7696 C */
+  --ing-naranja:          #dba444;  /* Pantone 7563 C */
+  --ing-petroleo:         #163544;  /* Pantone 2965 C */
+  --ing-morado:           #81398d;  /* Pantone 7662 C */
+
+  /* ----------------------------------------------------------
+     NEUTRALS — derivadas para superficies y bordes
+     ---------------------------------------------------------- */
+  --ing-blanco:           #ffffff;
+  --ing-negro:            #1a1a1f;
+  --ing-bg:               #ffffff;
+  --ing-bg-suave:         #f7f8f1;  /* tinte verde muy sutil para fondos alternos */
+  --ing-bg-tabla-alt:     #f9fbe7;  /* filas alternas en tablas (manual) */
+  --ing-superficie:       #ffffff;
+  --ing-borde:            #e6e6ea;
+  --ing-borde-suave:      #f0f0f2;
+  --ing-divisor:          #ececef;
+
+  /* Capas oscuras (headers/footers según el manual) */
+  --ing-petroleo-oscuro:  #0e2530;
+  --ing-verde-profundo:   #2e3a14;  /* fondo gradient piezas oficiales */
+
+  /* ----------------------------------------------------------
+     SEMANTIC TOKENS
+     ---------------------------------------------------------- */
+  --fg-1:                 var(--ing-gris);     /* texto principal */
+  --fg-2:                 #7a7882;             /* texto secundario */
+  --fg-3:                 #9d9ba3;             /* texto terciario / placeholders */
+  --fg-inv:               #ffffff;             /* sobre fondos oscuros */
+  --fg-marca:             var(--ing-verde);    /* énfasis de marca */
+  --fg-link:              var(--ing-verde-medio);
+
+  --bg-1:                 var(--ing-bg);
+  --bg-2:                 var(--ing-bg-suave);
+  --bg-marca:             var(--ing-verde);
+  --bg-marca-suave:       #eef5cf;             /* verde claro lavado para chips */
+  --bg-oscuro:            var(--ing-petroleo);
+  --bg-oscuro-deep:       var(--ing-petroleo-oscuro);
+
+  --borde-1:              var(--ing-borde);
+  --borde-2:              var(--ing-borde-suave);
+  --borde-marca:          var(--ing-verde);
+
+  /* Dashboard / SIG colores adicionales (de la pieza gráfica oficial) */
+  --sig-verde:            #89c22e;  /* verde gráficos SIG */
+  --sig-negro:            #45414b;  /* texto SIG */
+  --sig-naranja:          #f38117;  /* alertas SIG */
+
+  /* Estados de semáforo (oficiales del manual SIG) */
+  --status-ok:            #28a745;
+  --status-warn:          #ffc107;
+  --status-error:         #dc3545;
+
+  /* ----------------------------------------------------------
+     TYPOGRAPHY — Roboto (fallback Arial / Calibri)
+     ---------------------------------------------------------- */
+  --font-sans:            "Roboto", Arial, Calibri, "Helvetica Neue", sans-serif;
+  --font-display:         "Roboto", Arial, Calibri, sans-serif;
+
+  --fw-light:             300;
+  --fw-regular:           400;
+  --fw-medium:            500;
+  --fw-bold:              700;
+  --fw-black:             900;
+
+  /* Type scale — base 16px. Ajustar a 11pt para PDFs según manual. */
+  --fs-xs:                12px;
+  --fs-sm:                14px;
+  --fs-base:              16px;
+  --fs-md:                18px;
+  --fs-lg:                20px;
+  --fs-xl:                24px;
+  --fs-2xl:               30px;
+  --fs-3xl:               38px;
+  --fs-4xl:               48px;
+  --fs-5xl:               64px;
+  --fs-display:           88px;
+
+  --lh-tight:             1.1;
+  --lh-snug:              1.25;
+  --lh-normal:            1.5;
+  --lh-relaxed:           1.65;
+
+  --ls-tight:             -0.02em;
+  --ls-normal:            0;
+  --ls-wide:              0.06em;
+  --ls-ultra:             0.18em;       /* eyebrows, etiquetas */
+
+  /* ----------------------------------------------------------
+     SPACING — escala 4px
+     ---------------------------------------------------------- */
+  --sp-1:                 4px;
+  --sp-2:                 8px;
+  --sp-3:                 12px;
+  --sp-4:                 16px;
+  --sp-5:                 20px;
+  --sp-6:                 24px;
+  --sp-8:                 32px;
+  --sp-10:                40px;
+  --sp-12:                48px;
+  --sp-16:                64px;
+  --sp-20:                80px;
+  --sp-24:                96px;
+
+  /* ----------------------------------------------------------
+     RADII — moderados, con extras pill y card "manual"
+     ---------------------------------------------------------- */
+  --r-xs:                 4px;
+  --r-sm:                 6px;
+  --r-md:                 10px;
+  --r-lg:                 16px;
+  --r-xl:                 24px;
+  --r-2xl:                32px;
+  --r-pill:               999px;
+
+  /* ----------------------------------------------------------
+     SHADOWS — suaves; nunca aplicar al logo
+     ---------------------------------------------------------- */
+  --shadow-1:             0 1px 2px rgba(22, 53, 68, 0.06);
+  --shadow-2:             0 2px 8px rgba(22, 53, 68, 0.08), 0 1px 2px rgba(22, 53, 68, 0.05);
+  --shadow-3:             0 8px 24px rgba(22, 53, 68, 0.10), 0 2px 6px rgba(22, 53, 68, 0.06);
+  --shadow-4:             0 16px 48px rgba(22, 53, 68, 0.14), 0 4px 10px rgba(22, 53, 68, 0.06);
+  --shadow-marca:         0 8px 24px rgba(162, 198, 23, 0.28);
+
+  /* ----------------------------------------------------------
+     FOCUS RING
+     ---------------------------------------------------------- */
+  --ring-marca:           0 0 0 3px rgba(162, 198, 23, 0.35);
+
+  /* ----------------------------------------------------------
+     GRADIENTS — fondo corporativo autorizado (CET y compañía)
+     Inspirados en la pieza oficial "Lineamientos para tableros del SIG"
+     ---------------------------------------------------------- */
+  --grad-corporativo:     radial-gradient(ellipse at 20% 0%, #4a5720 0%, #2e3a14 55%, #1f2810 100%);
+  --grad-verde:           linear-gradient(135deg, #a2c617 0%, #758b29 100%);
+  --grad-petroleo:        linear-gradient(160deg, #1f4659 0%, #163544 60%, #0e2530 100%);
+
+  /* Transiciones */
+  --tr-fast:              120ms cubic-bezier(.2,.7,.3,1);
+  --tr-base:              180ms cubic-bezier(.2,.7,.3,1);
+  --tr-slow:              280ms cubic-bezier(.2,.7,.3,1);
+}
+
+/* ============================================================
+   ELEMENTOS BASE
+   ============================================================ */
+html, body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+  background: var(--bg-1);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--ing-gris);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--fs-4xl); letter-spacing: var(--ls-tight); }
+h2 { font-size: var(--fs-3xl); letter-spacing: var(--ls-tight); }
+h3 { font-size: var(--fs-2xl); }
+h4 { font-size: var(--fs-xl); }
+h5 { font-size: var(--fs-lg); font-weight: var(--fw-medium); }
+h6 { font-size: var(--fs-md); font-weight: var(--fw-medium); text-transform: uppercase; letter-spacing: var(--ls-wide); color: var(--ing-verde-medio); }
+
+p {
+  margin: 0;
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-1);
+  text-wrap: pretty;
+}
+
+small { font-size: var(--fs-sm); color: var(--fg-2); }
+
+a {
+  color: var(--fg-link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color var(--tr-fast), border-color var(--tr-fast);
+}
+a:hover { color: var(--ing-verde); border-bottom-color: currentColor; }
+
+::selection { background: var(--ing-verde); color: #fff; }
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+/* Eyebrow / etiquetas pequeñas con tracking amplio */
+.eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-ultra);
+  color: var(--ing-verde-medio);
+}
+
+/* Display heading — H1 para piezas grandes (slides, hero) */
+.display {
+  font-size: var(--fs-display);
+  font-weight: var(--fw-black);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  color: var(--ing-verde);
+}
+
+/* Highlight pill — el bloque blanco redondeado del manual ("SIG.") */
+.highlight-pill {
+  display: inline-block;
+  background: #fff;
+  color: var(--ing-verde-medio);
+  padding: 0.08em 0.4em;
+  border-radius: 0.25em;
+  font-weight: var(--fw-black);
+}
+
+/* Card panel — el panel redondeado verde-oscuro de las piezas oficiales */
+.panel-dark {
+  background: rgba(74, 87, 32, 0.55);
+  border: 1px solid rgba(221, 227, 135, 0.25);
+  border-radius: var(--r-xl);
+  color: #fff;
+  padding: var(--sp-6);
+}
+
+/* Texto sobre fondos oscuros / fotografías → siempre blanco */
+.on-dark { color: #fff; }
+.on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4 { color: #fff; }
+
+/* Acentos rápidos */
+.text-marca   { color: var(--ing-verde); }
+.text-gris    { color: var(--ing-gris); }
+.text-naranja { color: var(--ing-naranja); }
+.bg-marca     { background: var(--ing-verde); color: #fff; }
+.bg-gris      { background: var(--ing-gris); color: #fff; }
+.bg-petroleo  { background: var(--ing-petroleo); color: #fff; }

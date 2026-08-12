@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Control Maquinaria — Ingeurbe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Control de maquinaria y equipos en obra — Ingeurbe">
+<link rel="icon" type="image/png" href="assets/ingeurbe-app.png">
+<link rel="stylesheet" href="css/colors_and_type.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="page">
+  <header class="page-header">
+    <img src="assets/ingeurbe-app.png" alt="Ingeurbe" class="page-logo">
+    <div>
+      <div class="page-title">Control Maquinaria</div>
+      <div class="page-subtitle">Ingeurbe · Control de equipos y maquinaria</div>
+    </div>
+  </header>
+
+  <div class="phone">
+    <div class="phone-side phone-side--l1"></div>
+    <div class="phone-side phone-side--l2"></div>
+    <div class="phone-side phone-side--l3"></div>
+    <div class="phone-side phone-side--r"></div>
+
+    <div class="phone-screen">
+      <div class="notch"></div>
+
+      <div class="status-bar">
+        <span class="status-time">9:41</span>
+        <div class="status-icons">
+          <div class="signal-bars">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"><path d="M1 4.5C3.5 1.7 11.5 1.7 14 4.5" stroke="#1a1a1f" stroke-width="1.4" stroke-linecap="round" opacity=".35"/><path d="M3 6.8C4.8 4.8 10.2 4.8 12 6.8" stroke="#1a1a1f" stroke-width="1.4" stroke-linecap="round" opacity=".6"/><path d="M5.2 9C6.3 7.8 8.7 7.8 9.8 9" stroke="#1a1a1f" stroke-width="1.4" stroke-linecap="round" opacity=".85"/><circle cx="7.5" cy="11" r="1" fill="#1a1a1f"/></svg>
+          <div class="battery">
+            <div class="battery-shell"><div class="battery-fill"></div></div>
+            <div class="battery-tip"></div>
+          </div>
+        </div>
+      </div>
+
+      <main id="screen-root" class="screen-root"></main>
+      <nav id="tab-bar" class="tab-bar"></nav>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    Inicio &rarr; Equipos &rarr; + Registrar &rarr; Alertas &rarr; Reportes · Escanea el QR desde cualquier pantalla
+  </footer>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
